@@ -1,0 +1,311 @@
+/* Reset básico para remover margens e padding padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Estilo geral do container principal */
+.App {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  min-height: 80vh;
+}
+
+/* Estilo dos títulos */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin: 30px 0 20px;
+  border-bottom: 2px solid #4CAF50;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Estilo do formulário */
+form {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Estilo do grupo de input (input + erro) */
+.form-group {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Estilo dos inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Estilo das mensagens de erro */
+.error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Estilo do botão de cadastro/atualizar */
+button {
+  padding: 12px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Estilo do container de ações do formulário */
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilo do botão de cancelar */
+.cancel-btn {
+  padding: 12px 30px;
+  background-color: #7f8c8d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #6c757d;
+  transform: translateY(-2px);
+}
+
+.cancel-btn:active {
+  transform: translateY(0);
+}
+
+/* Estilo da grade de alunos */
+.alunos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+/* Estilo dos cards de aluno */
+.aluno-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Cores alternadas nos cards */
+.aluno-card:nth-child(odd) {
+  background-color: #e8f5e9;
+}
+
+.aluno-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do ícone no card */
+.aluno-icon {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 15px;
+  align-self: center;
+}
+
+.aluno-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.aluno-card p strong {
+  color: #34495e;
+  font-weight: 600;
+}
+
+/* Estilo do container de ações do card */
+.card-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Estilo do botão de edição */
+.edit-btn {
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.edit-btn:active {
+  transform: translateY(0);
+}
+
+/* Estilo do botão de exclusão */
+.delete-btn {
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.delete-btn:active {
+  transform: translateY(0);
+}
+
+/* Mensagem de "Nenhum aluno cadastrado" */
+p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px 15px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cancel-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .alunos-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .aluno-card {
+    padding: 15px;
+  }
+
+  .aluno-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .aluno-card p {
+    font-size: 0.9rem;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .error {
+    font-size: 0.75rem;
+  }
+}
